@@ -1,0 +1,13 @@
+<h1>Add Student</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    Name: <input type="text" name="name" value="{{ student.name|default:'' }}"><br><br>
+    Email: <input type="email" name="email" value="{{ student.email|default:'' }}"><br><br>
+    Age: <input type="number" name="age" value="{{ student.age|default:'' }}"><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+
